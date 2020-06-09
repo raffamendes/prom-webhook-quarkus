@@ -12,6 +12,7 @@ public class WebHook {
 
     @POST
     public String receiveAlert(@RequestBody AlertManagerPayload alert) {
+    	System.out.println(alert.getStatus()+" - "+alert.getReceiver());
     	return alert.getStatus();
     }
 }
